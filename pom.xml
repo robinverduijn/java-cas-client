@@ -26,7 +26,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jasig.cas.client</groupId>
-    <version>3.6.1</version>
+    <version>3.6.1-bb-1</version>
     <artifactId>cas-client</artifactId>
     <packaging>pom</packaging>
 
