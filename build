@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+mvn clean package
+mvn source:jar
+
+mvn deploy:deploy-file \
+  -DgroupId=org.jasig.cas.client \
+  -DartifactId=cas-client-core \
+  -Dpackaging=jar \
+  -Dfile=cas-client-core/target/cas-client-core-3.6.1-bb-1.jar \
+  -Dsources=cas-client-core/target/cas-client-core-3.6.1-bb-1-sources.jar \
+  -DrepositoryId=maven-bbpd-io \
+  -Durl=http://maven.bbpd.io/content/repositories/thirdparty/
