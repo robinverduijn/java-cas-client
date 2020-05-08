@@ -76,7 +76,7 @@ public class JndiConfigurationStrategyImpl extends BaseConfigurationStrategy {
     private String loadFromContext(final InitialContext context, final String path) {
         try {
             return (String) context.lookup(path);
-        } catch (final NamingException e) {
+        } catch (final IllegalAccessError | NamingException | NoClassDefFoundError e) {
             return null;
         }
     }
